@@ -1,6 +1,10 @@
 "use client";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useId, useState } from "react";
+
+const icon = "https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500";
 
 interface NavItem {
   text: string;
@@ -55,28 +59,25 @@ export default function Navbar() {
           <div className="flex flex-1 justify-center sm:justify-start">
             {/* Icon */}
             <div className="flex flex-shrink-0 items-center">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-              />
+              <img className="h-8 w-auto" src={icon} />
             </div>
             {/* Nav Items */}
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4 py-2">
                 {navItems.map((item) => {
                   return (
-                    <a
+                    <Link
                       key={useId()}
                       href={item.href}
                       className={
                         "px-3 " +
-                        (pathname.startsWith(item.href)
+                        (pathname === item.href
                           ? "font-bold pointer-events-none"
                           : "font-light")
                       }
                     >
                       {item.text}
-                    </a>
+                    </Link>
                   );
                 })}
               </div>
@@ -84,11 +85,12 @@ export default function Navbar() {
           </div>
           {/* Profile*/}
           <div className="absolute right-0 flex items-center pr-2">
-            <img
-              className="h-8 w-8 rounded-full"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
-            />
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </div>
         </div>
       </div>
@@ -98,18 +100,18 @@ export default function Navbar() {
         <div className="space-y-4 text-center py-3">
           {navItems.map((item) => {
             return (
-              <a
+              <Link
                 key={useId()}
                 href={item.href}
                 className={
                   "block " +
-                  (pathname.startsWith(item.href)
+                  (pathname === item.href
                     ? "font-bold pointer-events-none"
                     : "font-light")
                 }
               >
                 {item.text}
-              </a>
+              </Link>
             );
           })}
         </div>
