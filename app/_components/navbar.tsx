@@ -27,7 +27,7 @@ const navItems: NavItem[] = [
 ];
 
 export default function Navbar() {
-  const [hamburgerOpen, setHamburgerOpen] = useState(true);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const pathname = usePathname();
 
   return (
