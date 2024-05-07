@@ -26,6 +26,12 @@
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
   }
+  a:hover {
+    opacity: 0.75;
+  }
+  a:active {
+    opacity: 0.5;
+  }
 }
 
 @layer base {
