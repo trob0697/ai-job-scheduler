@@ -17,16 +17,16 @@ const navItems: NavItem[] = [
     href: "/",
   },
   {
-    text: "Team",
-    href: "/team",
+    text: "Pricing",
+    href: "/pricing",
   },
   {
-    text: "Projects",
-    href: "/projects",
+    text: "Testimonials",
+    href: "/testimonials",
   },
   {
-    text: "Calendar",
-    href: "/calendar",
+    text: "FAQ",
+    href: "/faq",
   },
 ];
 

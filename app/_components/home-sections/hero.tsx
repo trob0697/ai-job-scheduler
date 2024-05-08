@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-export default async function Hero() {
+export default function Hero() {
   return (
     <div className="nav-section">
       <div className="flex-col space-y-4">
