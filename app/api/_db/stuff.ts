@@ -7,9 +7,6 @@ import { db } from "../_db";
 import { stuff } from "../_db/schema";
 
 export async function getAllStuff() {
-  const user = auth();
-  if (!user.userId) throw new Error("Unauthorized");
-
   const stuff = await db.query.stuff.findMany();
   return stuff;
 }
