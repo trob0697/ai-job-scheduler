@@ -2,7 +2,7 @@
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useId, useState } from "react";
+import { useState } from "react";
 
 const icon = "https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500";
 
@@ -67,7 +67,7 @@ export default function Navbar() {
                 {navItems.map((item) => {
                   return (
                     <Link
-                      key={useId()}
+                      key={item.text.toLowerCase() + "-nav"}
                       href={item.href}
                       className={
                         "px-3 " +
@@ -101,7 +101,7 @@ export default function Navbar() {
           {navItems.map((item) => {
             return (
               <Link
-                key={useId()}
+                key={item.text.toLowerCase() + "-hamburger-nav"}
                 href={item.href}
                 className={
                   "block " +
