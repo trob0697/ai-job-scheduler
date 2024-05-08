@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --font: "Open Sans", sans-serif;
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -35,13 +36,42 @@
   body {
     @apply bg-background text-foreground;
   }
-}
+  /* html {
+    scroll-snap-type: y mandatory;
+  } */
 
-@layer base {
+  h1 {
+    font-weight: bold;
+    font-size: max(32px, 4vw);
+    line-height: max(44px, 5vw);
+  }
+  h2 {
+    font-weight: bold;
+    font-size: max(24px, 3vw);
+    line-height: max(32px, 4vw);
+  }
+  h3 {
+    font-weight: bold;
+    font-size: max(16px, 2vw);
+    line-height: max(24px, 3vw);
+  }
   a:hover {
     opacity: 0.75;
   }
   a:active {
     opacity: 0.5;
+  }
+
+  .nav-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    /* scroll-snap-align: start; */
+  }
+  .nav-section > * {
+    flex: 1;
+    min-width: 300px;
   }
 }
