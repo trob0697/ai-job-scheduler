@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 
 import Navbar from "./_components/navbar";
+import Footer from "./_components/footer";
 
 export const metadata: Metadata = {
   title: "App Template",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <body>
           <Navbar />
           <main>{children}</main>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>

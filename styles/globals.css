@@ -74,4 +74,20 @@
     flex: 1;
     min-width: 300px;
   }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 3rem 2rem 3rem;
+    gap: 5vw;
+  }
+  .footer > * {
+    margin: 0.5rem 0 0.5rem 0;
+    font-weight: lighter !important;
+    font-size: small;
+  }
+  .footer > a {
+    cursor: pointer;
+  }
 }
