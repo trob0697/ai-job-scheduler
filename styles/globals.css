@@ -55,6 +55,10 @@
     font-size: max(16px, 2vw);
     line-height: max(24px, 3vw);
   }
+  h4 {
+    font-weight: bold;
+    line-height: max(24px, 3vw);
+  }
   a:hover {
     opacity: 0.75;
   }

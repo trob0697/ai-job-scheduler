@@ -1,7 +1,7 @@
-export default function Tos() {
+export default function PrivacyPolicy() {
   return (
     <div className="py-10 w-6/12 min-w-96 m-auto">
-      <h3>Terms of Service</h3>
+      <h3>Privacy Policy</h3>
       <br />
       <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non
@@ -93,7 +93,7 @@ export default function Tos() {
         maximus massa. Vivamus vel venenatis massa. Maecenas in libero sit amet
         nulla pharetra dignissim.
       </span>
-      <h4>Last Updated: 2024-01-01</h4>
+      <h4>This policy is effective as of 2024-01-01</h4>
     </div>
   );
 }

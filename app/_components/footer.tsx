@@ -4,7 +4,7 @@ const supportEmail = "support@email.com";
 
 export default function Footer() {
   return (
-    <div>
+    <div className="pt-10">
       <hr />
       <div className="footer">
         <Link href={"mailto:" + supportEmail}>Support</Link>
