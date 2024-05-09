@@ -14,7 +14,7 @@ export default function Hero() {
       <Image
         src={"/random.jpg"}
         width={600}
-        height={300}
+        height={400}
         alt="random picture"
       />
     </div>

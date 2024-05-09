@@ -1,5 +1,6 @@
 "use client";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -59,7 +60,14 @@ export default function Navbar() {
           <div className="flex flex-1 justify-center sm:justify-start">
             {/* Icon */}
             <div className="flex flex-shrink-0 items-center">
-              <img className="h-8 w-auto" src={icon} />
+              <Image
+                className="h-8 w-auto"
+                loader={() => icon}
+                src={icon}
+                alt="icon"
+                width={50}
+                height={50}
+              />
             </div>
             {/* Nav Items */}
             <div className="hidden sm:ml-6 sm:block">
