@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* Hamburger */}
           <button
             type="button"
-            className="absolute left-0 sm:hidden p-2 hover:opacity-75 active:opacity-50"
+            className="absolute left-0 sm:hidden p-4 hover:opacity-75 active:opacity-50"
             onClick={() => setHamburgerOpen(!hamburgerOpen)}
           >
             <svg
@@ -84,7 +84,7 @@ export default function Navbar() {
             </div>
           </div>
           {/* Profile*/}
-          <div className="absolute right-0 flex items-center pr-2">
+          <div className="absolute right-0 flex items-center p-4">
             <SignedOut>
               <SignInButton />
             </SignedOut>
