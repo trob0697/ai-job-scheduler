@@ -1,6 +1,6 @@
 export default function Tos() {
   return (
-    <div>
+    <div className="min-h-screen">
       <div>TOS HERE</div>
     </div>
   );
