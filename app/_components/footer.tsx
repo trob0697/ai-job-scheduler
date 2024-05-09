@@ -1,11 +1,13 @@
 import Link from "next/link";
 
+const supportEmail = "support@email.com";
+
 export default function Footer() {
   return (
     <div>
       <hr />
       <div className="footer">
-        <Link href="/support">Support</Link>
+        <Link href={"mailto:" + supportEmail}>Support</Link>
         <Link href="/tos">Terms of Service</Link>
         <Link href="/privacy-policy">Privacy Policy</Link>
         <div>Copyright © 2024 - All rights reserved</div>
