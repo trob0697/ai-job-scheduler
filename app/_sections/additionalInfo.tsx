@@ -5,7 +5,7 @@ export default function AdditionalInfo() {
     <div className="nav-section">
       <Image
         className="hidden lg:block"
-        src={"/random.jpg"}
+        src={"/random2.jpg"}
         width={600}
         height={400}
         alt="random picture"
