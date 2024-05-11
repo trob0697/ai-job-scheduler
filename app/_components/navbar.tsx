@@ -22,10 +22,6 @@ const navItems: NavItem[] = [
     href: "/pricing",
   },
   {
-    text: "Testimonials",
-    href: "/testimonials",
-  },
-  {
     text: "FAQ",
     href: "/faq",
   },

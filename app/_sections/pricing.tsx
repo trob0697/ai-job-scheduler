@@ -14,7 +14,6 @@ interface PriceCard {
   cost: string;
   description: string[];
 }
-
 const priceCards: PriceCard[] = [
   {
     title: "Free Trial",
