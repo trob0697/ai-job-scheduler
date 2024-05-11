@@ -24,7 +24,6 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
-    --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
   }
 }
@@ -36,14 +35,13 @@
   body {
     @apply bg-background text-foreground;
   }
-  /* html {
-    scroll-snap-type: y mandatory;
-  } */
 
   h1 {
     font-weight: bold;
     font-size: max(32px, 4vw);
     line-height: max(44px, 5vw);
+    border-radius: 100px;
+    color: hsl(var(--primary));
   }
   h2 {
     font-weight: bold;
@@ -63,6 +61,14 @@
     opacity: 0.75;
   }
   a:active {
+    opacity: 0.75;
+  }
+  li {
+    list-style-type: circle;
+    margin-left: 5vh;
+    text-align: left;
+  }
+  button:active {
     opacity: 0.5;
   }
 
@@ -71,13 +77,32 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    min-height: 75vh;
+    padding: 5vh 0vh 5vh 0;
     gap: 4vw;
-    /* scroll-snap-align: start; */
   }
   .nav-section > * {
     flex: 1;
     min-width: 300px;
   }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    align-items: center;
+    justify-content: center;
+    min-width: none !important;
+    flex: none !important;
+    padding: 25vh 0vh 25vh 0;
+  }
+  .cards > * {
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+  }
+
   .footer {
     display: flex;
     flex-wrap: wrap;

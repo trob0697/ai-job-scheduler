@@ -67,6 +67,7 @@ export default function Navbar() {
                 alt="icon"
                 width={50}
                 height={50}
+                unoptimized
               />
             </div>
             {/* Nav Items */}
