@@ -11,12 +11,12 @@ export default function AdditionalInfo() {
         alt="random picture"
       />
       <div className="flex-col space-y-4">
-        <h2>Put Some Yappenese Here</h2>
+        <h2>Supplemental Yappenese Here</h2>
         <ul>
-          <li>Yapp One</li>
-          <li>Yapp Two</li>
-          <li>Yapp Three</li>
-          <li>Yapp Four</li>
+          <li>Nya</li>
+          <li>Ichi</li>
+          <li>Ni</li>
+          <li>San</li>
         </ul>
       </div>
     </div>
