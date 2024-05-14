@@ -92,9 +92,7 @@
     gap: 4vw;
     align-items: center;
     justify-content: center;
-    min-width: none !important;
-    flex: none !important;
-    padding: 25vh 0vh 25vh 0;
+    padding: 20vh 0vh 20vh 0;
   }
   .cards > * {
     flex: 1;

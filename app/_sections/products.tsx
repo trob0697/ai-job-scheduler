@@ -8,26 +8,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { ProductAndPrice } from "../_models";
+import * as stripe from "../api/stripe";
+
+function formatPrice(cents: number) {
+  return "$" + (cents / 100).toFixed(2);
+}
 
 export default async function Products() {
-  const products: ProductAndPrice[] = await (
-    await fetch(`${process.env.BASE_URL}/api/products`)
-  ).json();
-
-  // const handlePayment = async (product: ProductAndPrice) => {
-  //   const response = await fetch(`${process.env.BASE_URL}/api/payment`, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       priceId: product.default_price,
-  //     }),
-  //   });
-  //   const checkoutUrl: string = await response.json();
-  //   window.location.assign(checkoutUrl);
-  // };
+  const products = await stripe.getProducts();
 
   return (
     <div className="cards">
@@ -55,7 +43,7 @@ export default async function Products() {
               </CardContent>
             </div>
             <CardFooter className="justify-center">
-              <Button>{`$${(product.unit_amount / 100).toFixed(2)}`}</Button>
+              <Button>{formatPrice(product.unit_amount)}</Button>
             </CardFooter>
           </Card>
         );
