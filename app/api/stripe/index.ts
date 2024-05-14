@@ -15,13 +15,12 @@ export async function getProducts() {
   return productsAndPrices.reverse() as ProductInfo[];
 }
 
-export async function makePayment(product: ProductInfo) {
+export async function makePayment(priceId: string) {
   const session = await stripe.checkout.sessions.create({
-    line_items: [{ price: product.default_price, quantity: 1 }],
+    line_items: [{ price: priceId, quantity: 1 }],
     mode: "payment",
     success_url: process.env.BASE_URL,
     cancel_url: process.env.BASE_URL,
-    automatic_tax: { enabled: true },
   });
   redirect(session.url || process.env.BASE_URL!);
 }

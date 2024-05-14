@@ -10,12 +10,18 @@ import {
 
 import * as stripe from "../api/stripe";
 
-function formatPrice(cents: number) {
-  return "$" + (cents / 100).toFixed(2);
-}
-
 export default async function Products() {
   const products = await stripe.getProducts();
+
+  const formatPrice = (cents: number) => {
+    return "$" + (cents / 100).toFixed(2);
+  };
+
+  const handlePayment = async (data: FormData) => {
+    "use server";
+    const priceId = data.get("priceId") as string;
+    await stripe.makePayment(priceId);
+  };
 
   return (
     <div className="cards">
@@ -43,7 +49,16 @@ export default async function Products() {
               </CardContent>
             </div>
             <CardFooter className="justify-center">
-              <Button>{formatPrice(product.unit_amount)}</Button>
+              <form action={handlePayment}>
+                <input
+                  name="priceId"
+                  className="hidden"
+                  defaultValue={product.default_price}
+                />
+                <Button type="submit">
+                  {formatPrice(product.unit_amount)}
+                </Button>
+              </form>
             </CardFooter>
           </Card>
         );
