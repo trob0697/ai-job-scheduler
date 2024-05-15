@@ -6,7 +6,7 @@ import { ProductInfo } from "../../_helpers/models";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
-export async function getProducts(req: Request) {
+export async function getProducts() {
   // const { success } = await ratelimit.limit(identifier);
   // if (!success) throw new Error("Ratelimited");
 
