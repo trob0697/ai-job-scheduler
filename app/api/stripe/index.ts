@@ -26,8 +26,8 @@ export async function makePayment(priceId: string) {
   const session = await stripe.checkout.sessions.create({
     line_items: [{ price: priceId, quantity: 1 }],
     mode: "payment",
-    success_url: process.env.__NEXT_PRIVATE_ORIGIN,
-    cancel_url: process.env.__NEXT_PRIVATE_ORIGIN,
+    success_url: process.env.BASE_URL,
+    cancel_url: process.env.BASE_URL,
   });
   redirect(session.url || process.env.__NEXT_PRIVATE_ORIGIN!);
 }
