@@ -19,11 +19,11 @@ const navItems: NavItem[] = [
   },
   {
     text: "Pricing",
-    href: "/pricing",
+    href: "#pricing",
   },
   {
     text: "FAQ",
-    href: "/faq",
+    href: "#faq",
   },
 ];
 

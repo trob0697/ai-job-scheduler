@@ -24,7 +24,7 @@ export default async function Products() {
   };
 
   return (
-    <div className="cards">
+    <div id="pricing" className="cards">
       {products.map((product) => {
         return (
           <Card
