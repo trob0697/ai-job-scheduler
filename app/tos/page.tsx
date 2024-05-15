@@ -1,6 +1,6 @@
 export default function Tos() {
   return (
-    <div className="py-10 w-6/12 min-w-96 m-auto">
+    <div className="m-auto w-6/12 min-w-96 py-10">
       <h3>Terms of Service</h3>
       <br />
       <span>

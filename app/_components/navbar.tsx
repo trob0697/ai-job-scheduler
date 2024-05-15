@@ -38,7 +38,7 @@ export default function Navbar() {
           {/* Hamburger */}
           <button
             type="button"
-            className="absolute left-0 sm:hidden p-4 hover:opacity-75 active:opacity-50"
+            className="absolute left-0 p-4 hover:opacity-75 active:opacity-50 sm:hidden"
             onClick={() => setHamburgerOpen(!hamburgerOpen)}
           >
             <svg
@@ -77,7 +77,7 @@ export default function Navbar() {
                       className={
                         "px-3 " +
                         (pathname === item.href
-                          ? "font-bold pointer-events-none"
+                          ? "pointer-events-none font-bold"
                           : "font-light")
                       }
                     >
@@ -102,7 +102,7 @@ export default function Navbar() {
       {/* Hamburger Menu */}
       <div className={hamburgerOpen ? "sm:hidden" : "hidden"}>
         <hr />
-        <div className="space-y-4 text-center py-3">
+        <div className="space-y-4 py-3 text-center">
           {navItems.map((item) => {
             return (
               <Link
@@ -111,7 +111,7 @@ export default function Navbar() {
                 className={
                   "block " +
                   (pathname === item.href
-                    ? "font-bold pointer-events-none"
+                    ? "pointer-events-none font-bold"
                     : "font-light")
                 }
               >

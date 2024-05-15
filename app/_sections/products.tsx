@@ -28,7 +28,7 @@ export default async function Products() {
       {products.map((product) => {
         return (
           <Card
-            className="flex flex-col text-center justify-between"
+            className="flex flex-col justify-between text-center"
             key={product.default_price}
           >
             <div>
