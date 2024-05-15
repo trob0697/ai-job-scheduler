@@ -15,8 +15,6 @@ Template for new app idea
 
 ## TODO
 
-- [ ] Deploy vercel via github actions
-- [ ] Github actions for branches
-- [ ] FAQ Page
-- [ ] Rate limiting
-- [ ] Testing
+- FAQ Page
+- Rate limiting
+- Testing
