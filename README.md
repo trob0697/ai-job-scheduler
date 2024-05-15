@@ -7,14 +7,8 @@ Template for new app idea
 - Next.js (React)
 - Tailwinds + shadcn/ui
 - Postgres + Drizzle ORM
-- Vercel + Vercel Storage
 - Clerk (Auth)
 - Stripe (Payment)
 - Upstash (Rate Limiting)
 - GitHub Actions (CI/CD)
-
-## TODO
-
-- FAQ Page
-- Rate limiting
-- Testing
+- Vercel (Deployment, Storage, Logs, Analytics, Speed Insights)
