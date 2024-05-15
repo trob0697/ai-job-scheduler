@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     event = stripe.webhooks.constructEvent(
       payload,
       signature!,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      process.env.STRIPE_WEBHOOK_SECRET!,
     );
   } catch (err: any) {
     return NextResponse.json(err.message, { status: 400 });
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
 }
 
 const handleCheckoutSessionCompleted = async (
-  event: Stripe.CheckoutSessionCompletedEvent
+  event: Stripe.CheckoutSessionCompletedEvent,
 ) => {
   // Handle stuff here
 };
