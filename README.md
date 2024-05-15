@@ -19,3 +19,4 @@ Template for new app idea
 - [ ] Github actions for branches
 - [ ] FAQ Page
 - [ ] Rate limiting
+- [ ] Testing
