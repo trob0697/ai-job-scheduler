@@ -12,3 +12,10 @@ Template for new app idea
 - Stripe (Payment)
 - Upstash (Rate Limiting)
 - GitHub Actions (CI/CD)
+
+## TODO
+
+- [ ] Deploy vercel via github actions
+- [ ] Github actions for branches
+- [ ] FAQ Page
+- [ ] Rate limiting
