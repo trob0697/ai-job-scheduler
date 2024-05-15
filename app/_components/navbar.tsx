@@ -114,6 +114,7 @@ export default function Navbar() {
                     ? "pointer-events-none font-bold"
                     : "font-light")
                 }
+                onClick={() => setHamburgerOpen(false)}
               >
                 {item.text}
               </Link>
