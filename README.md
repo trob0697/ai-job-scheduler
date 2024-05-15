@@ -10,10 +10,5 @@ Template for new app idea
 - Vercel + Vercel Storage
 - Clerk (Auth)
 - Stripe (Payment)
+- Upstash (Rate Limiting)
 - GitHub Actions (CI/CD)
-
-## To Add
-
-- Rate Limiting (Upstash)
-- Analytics (posthog)
-- Error Management (sentry)
