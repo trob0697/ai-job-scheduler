@@ -4,18 +4,16 @@ Template for new app idea
 
 ## Tech Stack
 
-- React.js
-- Next.js
-- Vercel
+- Next.js (React)
 - Tailwinds + shadcn/ui
-- Postgres (Vercel Storage) + Drizzle ORM
-- Clerk
-- Zod
+- Postgres + Drizzle ORM
+- Vercel + Vercel Storage
+- Clerk (Auth)
+- Stripe (Payment)
+- GitHub Actions (CI/CD)
 
 ## To Add
 
-- Stripe
-- GitHub Actions (CI/CD)
 - Rate Limiting (Upstash)
 - Analytics (posthog)
 - Error Management (sentry)
