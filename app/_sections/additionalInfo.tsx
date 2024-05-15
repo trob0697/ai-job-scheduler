@@ -2,9 +2,8 @@ import Image from "next/image";
 
 export default function AdditionalInfo() {
   return (
-    <div className="nav-section">
+    <div className="nav-section flex-col-reverse lg:flex-row">
       <Image
-        className="hidden lg:block"
         src={"/random2.jpg"}
         width={600}
         height={400}
