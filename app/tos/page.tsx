@@ -1,9 +1,8 @@
 export default function Tos() {
   return (
-    <div className="m-auto w-6/12 min-w-96 py-10">
-      <h4>Terms of Service</h4>
-      <br />
-      <span>
+    <div className="terms-and-privacy">
+      <h2>Terms of Service</h2>
+      <div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non
         pellentesque felis. Nulla tristique congue consequat. Phasellus lacinia
         libero non massa tristique congue. Nam quis justo id risus malesuada
@@ -92,7 +91,7 @@ export default function Tos() {
         ullamcorper. Etiam dui risus, malesuada in tortor non, sollicitudin
         maximus massa. Vivamus vel venenatis massa. Maecenas in libero sit amet
         nulla pharetra dignissim.
-      </span>
+      </div>
       <h5>Last Updated: 2024-01-01</h5>
     </div>
   );
