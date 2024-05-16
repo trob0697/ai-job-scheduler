@@ -34,11 +34,11 @@ export default function FAQ() {
   return (
     <>
       <div id="faq" className="nav-section min-h-0 items-start">
-        <div className="min-w-96">
+        <div>
           <h4 className="text-[hsl(var(--primary))]">FAQ</h4>
           <h5>Frequently Asked Questions</h5>
         </div>
-        <Accordion type="single" collapsible className="min-w-96">
+        <Accordion type="single" collapsible>
           {FAQs &&
             FAQs.map((item, i) => {
               return (
