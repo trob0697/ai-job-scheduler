@@ -5,14 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+import * as Models from "../_helpers/models";
+
 const icon = "https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500";
 
-interface NavItem {
-  text: string;
-  href: string;
-}
-
-const navItems: NavItem[] = [
+const navItems: Models.NavItem[] = [
   {
     text: "Home",
     href: "/",

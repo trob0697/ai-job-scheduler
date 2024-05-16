@@ -43,7 +43,6 @@
     font-weight: bold;
     font-size: max(32px, 4vw);
     line-height: max(44px, 5vw);
-    border-radius: 100px;
     color: hsl(var(--primary));
   }
   h2 {
@@ -51,12 +50,12 @@
     font-size: max(24px, 3vw);
     line-height: max(32px, 4vw);
   }
-  h3 {
+  h4 {
     font-weight: bold;
     font-size: max(16px, 2vw);
     line-height: max(24px, 3vw);
   }
-  h4 {
+  h5 {
     font-weight: bold;
     line-height: max(24px, 3vw);
   }

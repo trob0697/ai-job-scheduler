@@ -10,13 +10,13 @@ export const ratelimit = new Ratelimit({
   limiter: Ratelimit.slidingWindow(10, "60 s"),
 });
 
-export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
-};
-
 export async function middleware(request: NextRequest) {
   const { success } = await ratelimit.limit(request.ip || "127.0.0.1");
   if (!success) return NextResponse.json("Rate Limited!", { status: 429 });
 
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+};

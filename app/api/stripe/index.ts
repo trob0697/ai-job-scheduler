@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import Stripe from "stripe";
 
-import { ProductInfo } from "../../_helpers/models";
+import * as Models from "../../_helpers/models";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -12,7 +12,7 @@ export async function getProducts() {
     const price = prices.find((item) => item.id === product.default_price);
     return { ...product, ...price };
   });
-  return productsAndPrices.reverse() as ProductInfo[];
+  return productsAndPrices.reverse() as Models.ProductInfo[];
 }
 
 export async function makePayment(priceId: string) {

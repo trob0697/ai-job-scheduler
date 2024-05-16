@@ -1,6 +1,7 @@
 import Hero from "./_sections/hero";
 import AdditionalInfo from "./_sections/additionalInfo";
 import Products from "./_sections/products";
+import FAQ from "./_sections/faq";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <AdditionalInfo />
       <Products />
+      <FAQ />
     </div>
   );
 }

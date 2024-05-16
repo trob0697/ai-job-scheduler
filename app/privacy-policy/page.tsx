@@ -1,7 +1,7 @@
 export default function PrivacyPolicy() {
   return (
     <div className="m-auto w-6/12 min-w-96 py-10">
-      <h3>Privacy Policy</h3>
+      <h4>Privacy Policy</h4>
       <br />
       <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non
@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
         maximus massa. Vivamus vel venenatis massa. Maecenas in libero sit amet
         nulla pharetra dignissim.
       </span>
-      <h4>This policy is effective as of 2024-01-01</h4>
+      <h5>This policy is effective as of 2024-01-01</h5>
     </div>
   );
 }
