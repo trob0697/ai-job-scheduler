@@ -67,6 +67,7 @@ export default function Navbar() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4 py-2">
                 {navItems.map((item) => {
+                  if (pathname !== "/" && item.href != "/") return;
                   return (
                     <Link
                       key={item.text.toLowerCase() + "-nav"}
@@ -101,6 +102,7 @@ export default function Navbar() {
         <hr />
         <div className="space-y-4 py-3 text-center">
           {navItems.map((item) => {
+            if (pathname !== "/" && item.href != "/") return;
             return (
               <Link
                 key={item.text.toLowerCase() + "-hamburger-nav"}
