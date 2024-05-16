@@ -2,7 +2,7 @@ name: Vercel Pre-Deployment CI/CD
 on: [push]
 jobs:
   lint_test:
-    name: Lint and Test
+    name: Lint, Build, and Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -10,4 +10,5 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run format
+      - run: npm run build
       - run: npm run test
