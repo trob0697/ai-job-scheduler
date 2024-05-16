@@ -1,4 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import "../styles/globals.css";
 
@@ -22,6 +24,8 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </ClerkProvider>
